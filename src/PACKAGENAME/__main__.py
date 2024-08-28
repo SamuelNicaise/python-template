@@ -42,10 +42,11 @@ def main():
     subparsers = parser.add_subparsers(help="sub-command help")
 
     MYPARSER = subparsers.add_parser(
-        "MY_PARSER",
+        "MYPARSER",
         help="",
         formatter_class=argparse.MetavarTypeHelpFormatter,
     )
+    MYPARSER.set_defaults(subparser="MYPARSER")
 
     for subparser in (MYPARSER,):
         subparser.add_argument(
