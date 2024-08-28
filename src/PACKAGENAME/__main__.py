@@ -9,7 +9,7 @@ import logging as log
 
 import PACKAGENAME
 
-def main_MYPARSER():
+def main_PARSERNAME():
     pass
 
 def set_log_level(verbosity):
@@ -41,14 +41,14 @@ def main():
 
     subparsers = parser.add_subparsers(help="sub-command help")
 
-    MYPARSER = subparsers.add_parser(
-        "MYPARSER",
+    PARSERNAME = subparsers.add_parser(
+        "PARSERNAME",
         help="",
         formatter_class=argparse.MetavarTypeHelpFormatter,
     )
-    MYPARSER.set_defaults(subparser="MYPARSER")
+    PARSERNAME.set_defaults(subparser="PARSERNAME")
 
-    for subparser in (MYPARSER,):
+    for subparser in (PARSERNAME,):
         subparser.add_argument(
             "-v",
             "--verbosity",
@@ -63,8 +63,8 @@ def main():
     else:
         set_log_level(args.verbosity)
         log.debug(f"Args: {str(args)}")
-        if args.subparser == "MYPARSER":
-            main_MYPARSER()
+        if args.subparser == "PARSERNAME":
+            main_PARSERNAME()
 
 if __name__ == "__main__":
     main()
