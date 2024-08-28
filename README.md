@@ -6,7 +6,6 @@ Variables to replace across repository:
 - PARSERNAME
 - AUTHORNAME
 - REPONAME
-- MYPARSER
 
 ## Installation
 
