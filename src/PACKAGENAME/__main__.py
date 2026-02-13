@@ -9,8 +9,10 @@ import logging as log
 
 import PACKAGENAME
 
+
 def main_PARSERNAME():
-    pass
+    log.info("Hello world!")
+
 
 def set_log_level(verbosity):
     verbosity = verbosity.lower()
@@ -30,6 +32,7 @@ def set_log_level(verbosity):
         datefmt="%Y-%m-%d %H:%M:%S",
         level=configs[verbosity],
     )
+
 
 def main():
     parser = argparse.ArgumentParser(prog="PACKAGENAME")
@@ -65,6 +68,7 @@ def main():
         log.debug(f"Args: {str(args)}")
         if args.subparser == "PARSERNAME":
             main_PARSERNAME()
+
 
 if __name__ == "__main__":
     main()

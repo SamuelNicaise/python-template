@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PACKAGENAME"
+version = "1.0.0"
+description = ""
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "AUTHORNAME" }
+]
+dependencies = []
+requires-python = ">=3.10"
+keywords = ["bioinformatics", "genetics"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Healthcare Industry",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: GNU Affero General Public License v3"
+]
+
+[project.urls]
+Homepage = "https://github.com/AUTHORNAME/REPONAME.git"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+package-data = { "PACKAGENAME" = ["*.yaml", "*.json"] }
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "pytest"
+]
+
+[project.scripts]
+PACKAGENAME = "PACKAGENAME.__main__:main"
